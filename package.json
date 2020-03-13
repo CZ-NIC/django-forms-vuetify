@@ -1,12 +1,15 @@
 {
   "name": "django-forms-vuetify",
-  "main": "dist/django-forms-vuetify.common.js",
   "version": "0.0.1",
+  "description": "Create Vuetify forms from encoded django forms in JSON",
+  "author": "Karin Strouhalů <karin.strouhalu@nic.cz>",
+  "license": "GPL-3.0",
+  "main": "dist/django-forms-vuetify.common.js",
   "scripts": {
-    "watch": "vue-cli-service serve",
     "build": "vue-cli-service build --target lib --name 'django-forms-vuetify' src/main.ts",
+    "check": "vue-cli-service lint --max-errors 0 --max-warnings 0 tests src",
     "test": "vue-cli-service test:unit",
-    "check": "vue-cli-service lint"
+    "watch": "NODE_ENV=production vue-cli-service build --watch --mode development --target lib --name 'django-forms-vuetify' src/main.ts"
   },
   "dependencies": {
     "core-js": "^3.6.4",
