@@ -1,0 +1,41 @@
+{
+  "name": "django-forms-vuetify",
+  "version": "0.0.1",
+  "description": "Create Vuetify forms from encoded django forms in JSON",
+  "author": "Karin Strouhalů <karin.strouhalu@nic.cz>",
+  "license": "GPL-3.0",
+  "main": "dist/django-forms-vuetify.common.js",
+  "scripts": {
+    "build": "vue-cli-service build --target lib --name 'django-forms-vuetify' src/main.ts",
+    "check": "vue-cli-service lint --max-errors 0 --max-warnings 0 tests src",
+    "test": "vue-cli-service test:unit",
+    "watch": "NODE_ENV=production vue-cli-service build --watch --mode development --target lib --name 'django-forms-vuetify' src/main.ts"
+  },
+  "dependencies": {
+    "core-js": "^3.6.4",
+    "vue": "^2.6.11",
+    "vuetify": "^2.2.16"
+  },
+  "devDependencies": {
+    "@types/jest": "^24.9.1",
+    "@typescript-eslint/eslint-plugin": "^2.18.0",
+    "@typescript-eslint/parser": "^2.18.0",
+    "@vue/cli-plugin-babel": "^4.2.0",
+    "@vue/cli-plugin-eslint": "^4.2.0",
+    "@vue/cli-plugin-typescript": "^4.2.0",
+    "@vue/cli-plugin-unit-jest": "^4.2.0",
+    "@vue/cli-service": "^4.2.0",
+    "@vue/eslint-config-typescript": "^5.0.2",
+    "@vue/test-utils": "1.0.0-beta.31",
+    "eslint": "^6.8.0",
+    "eslint-plugin-vue": "^6.2.2",
+    "jest": "^25.1.0",
+    "sass": "^1.19.0",
+    "sass-loader": "^8.0.0",
+    "ts-jest": "^25.2.1",
+    "typescript": "~3.7.5",
+    "vue-cli-plugin-vuetify": "^2.0.5",
+    "vue-template-compiler": "^2.6.11",
+    "vuetify-loader": "^1.4.3"
+  }
+}
