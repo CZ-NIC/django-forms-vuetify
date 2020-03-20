@@ -3,4 +3,7 @@ module.exports = {
     testMatch: [
         '**/tests/**/*.test.[jt]s?(x)',
     ],
+    setupFilesAfterEnv: [
+        '<rootDir>/tests/helpers/setup-vue.ts',
+    ],
 }

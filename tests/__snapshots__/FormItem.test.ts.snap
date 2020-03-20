@@ -1,0 +1,42 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FormItem snapshot matches snapshot - checkbox 1`] = `
+<div>
+  <v-checkbox-stub errorcount="1" errormessages="Error" messages="" rules="val => this.field.required &amp;&amp; val !== ''" successmessages="" value="test value" backgroundcolor="" hint="Help for test checkbox" label="Test label" ripple="true" valuecomparator="function deepEqual(a, b) {
+  if (a === b) return true;
+
+  if (a instanceof Date &amp;&amp; b instanceof Date) {
+    // If the values are Date, they were convert to timestamp with getTime and compare it
+    if (a.getTime() !== b.getTime()) return false;
+  }
+
+  if (a !== Object(a) || b !== Object(b)) {
+    // If the values aren't objects, they were already checked for equality
+    return false;
+  }
+
+  var props = Object.keys(a);
+
+  if (props.length !== Object.keys(b).length) {
+    // Different number of props, don't bother to check
+    return false;
+  }
+
+  return props.every(function (p) {
+    return deepEqual(a[p], b[p]);
+  });
+}" indeterminateicon="$checkboxIndeterminate" officon="$checkboxOff" onicon="$checkboxOn" name="test_checkbox"></v-checkbox-stub>
+</div>
+`;
+
+exports[`FormItem snapshot matches snapshot - text input 1`] = `
+<div>
+  <v-text-field-stub errorcount="1" errormessages="Error" messages="" rules="val => this.field.required &amp;&amp; val !== ''" successmessages="" value="test value" backgroundcolor="" hint="Help for test input" label="Test label" loaderheight="2" clearicon="$clear" type="text" name="test_input"></v-text-field-stub>
+</div>
+`;
+
+exports[`FormItem snapshot matches snapshot - textarea 1`] = `
+<div>
+  <v-textarea-stub errorcount="1" errormessages="Error" messages="" rules="val => this.field.required &amp;&amp; val !== ''" successmessages="" value="test value" backgroundcolor="" hint="Help for test textarea" label="Test label" loaderheight="2" clearicon="$clear" type="text" rowheight="24" rows="5" name="test_textarea"></v-textarea-stub>
+</div>
+`;
