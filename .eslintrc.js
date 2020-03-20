@@ -48,6 +48,9 @@ module.exports = {
         'vue/html-closing-bracket-spacing': ['warn', {selfClosingTag: 'never'}],  // No space before self closing tag end
         'vue/prop-name-casing': ['error', 'snake_case'],    // Enforce property names in props to snake case
         'vue/max-attributes-per-line': ['error', {singleline: 5, multiline: 1}],  // Allow max 5 attributes on single line (helpful for xs2, pa-1 etc.)
+
+        // TypeScript specific settings
+        '@typescript-eslint/camelcase': 'off'
     },
     overrides: [
         {
