@@ -24,6 +24,19 @@ describe('FormItem snapshot', () => {
         expect(wrapper).toMatchSnapshot()
     })
 
+    test('matches snapshot - password input', () => {
+        const wrapper: Wrapper<FormItem> = createWrapperForField({
+            name: 'test_password_input',
+            label: 'Test label',
+            help_text: 'Help for test password input',
+            value: 'test value',
+            required: true,
+            errors: ['Error'],
+            widget: {name: 'input', type: 'password'},
+        })
+        expect(wrapper).toMatchSnapshot()
+    })
+
     test('matches snapshot - checkbox', () => {
         const wrapper: Wrapper<FormItem> = createWrapperForField({
             name: 'test_checkbox',

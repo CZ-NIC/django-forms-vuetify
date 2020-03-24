@@ -29,6 +29,12 @@ exports[`FormItem snapshot matches snapshot - checkbox 1`] = `
 </div>
 `;
 
+exports[`FormItem snapshot matches snapshot - password input 1`] = `
+<div>
+  <v-text-field-stub errorcount="1" errormessages="Error" messages="" rules="val => this.field.required &amp;&amp; val !== ''" successmessages="" value="test value" appendicon="visibility_off" backgroundcolor="" hint="Help for test password input" label="Test label" loaderheight="2" clearicon="$clear" type="password" name="test_password_input"></v-text-field-stub>
+</div>
+`;
+
 exports[`FormItem snapshot matches snapshot - text input 1`] = `
 <div>
   <v-text-field-stub errorcount="1" errormessages="Error" messages="" rules="val => this.field.required &amp;&amp; val !== ''" successmessages="" value="test value" backgroundcolor="" hint="Help for test input" label="Test label" loaderheight="2" clearicon="$clear" type="text" name="test_input"></v-text-field-stub>

@@ -11,22 +11,33 @@
                 v-bind="getCommonProperties()"
             />
 
+            <v-text-field
+                v-else-if="field.widget.type === 'password'"
+                :type="show_password ? 'text' : 'password'"
+                :append-icon="show_password ? 'visibility' : 'visibility_off'"
+                v-bind="getCommonProperties()"
+                @click:append="show_password = !show_password"
+            />
+
             <v-checkbox
                 v-else-if="field.widget.type === 'checkbox'"
                 v-bind="getCommonProperties()"
             />
             <div v-else>
                 Input item of {{ field.widget.type }} type is not supported yet.
+                {{ printError(field.widget) }}
             </div>
         </template>
 
         <div v-else>
             Item with widget: {{ `name=${field.widget.name}, type=${field.widget.type}` }} is not supported yet.
+            {{ printError(field.widget) }}
         </div>
     </div>
 </template>
 
 <script lang="ts">
+import 'reflect-metadata'
 import { Vue, Component, Prop } from 'vue-property-decorator'
 
 export interface WidgetInterface {
@@ -48,18 +59,24 @@ export interface FieldInterface {
 
 @Component
 export default class FormItem extends Vue {
-    @Prop({type: Object, default: {widget: {}} })
+    @Prop({default: {widget: {}} })
     readonly field!: FieldInterface
+
+    private show_password = false
 
     private getCommonProperties() {
         return {
             name: this.field.name,
             label: this.field.label,
-            ['error-messages']: (this.field.errors || []).join(', '),
+            'error-messages': this.field.errors || [],
             hint: this.field.help_text,
             rules: [(val: string) => this.field.required && val !== ''],
             value: this.field.value,
         }
+    }
+
+    private printError(widget: WidgetInterface): void {
+        console.error(`Item with widget: { name=${widget.name}, type=${widget.type} } is not supported yet.`)
     }
 }
 </script>

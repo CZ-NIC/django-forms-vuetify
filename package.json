@@ -14,8 +14,6 @@
   "dependencies": {
     "core-js": "^3.6.4",
     "vue": "^2.6.11",
-    "vue-async-computed": "^3.8.2",
-    "vue-async-computed-decorator": "0.0.4",
     "vuetify": "^2.2.16"
   },
   "devDependencies": {
@@ -32,6 +30,7 @@
     "eslint": "^6.8.0",
     "eslint-plugin-vue": "^6.2.2",
     "jest": "^25.1.0",
+    "reflect-metadata": "^0.1.13",
     "sass": "^1.19.0",
     "sass-loader": "^8.0.0",
     "ts-jest": "^25.2.1",

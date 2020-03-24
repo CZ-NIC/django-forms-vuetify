@@ -2,10 +2,19 @@
 
 exports[`Form snapshot matches snapshot 1`] = `
 <form action="test.local/send" method="post">
-  Test error 1, Test error 2
-  <section>
-    <formitem-stub field="[object Object]" value="test value"></formitem-stub>
-  </section>
+  <ul>
+    <li>
+      Test error 1
+    </li>
+    <li>
+      Test error 2
+    </li>
+  </ul>
+  <div>
+    <div>
+      <formitem-stub field="[object Object]" value="test value"></formitem-stub>
+    </div>
+  </div>
   <v-btn-stub color="primary" tag="button" activeclass="" type="submit" primary="">
     Send
   </v-btn-stub>
