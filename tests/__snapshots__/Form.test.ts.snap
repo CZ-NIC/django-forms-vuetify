@@ -12,7 +12,7 @@ exports[`Form snapshot matches snapshot 1`] = `
   </ul>
   <div>
     <div>
-      <formitem-stub field="[object Object]" value="test value"></formitem-stub>
+      <formitem-stub field="[object Object]"></formitem-stub>
     </div>
   </div>
   <v-btn-stub color="primary" tag="button" activeclass="" type="submit" primary="">

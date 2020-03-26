@@ -8,7 +8,7 @@ describe('Form snapshot', () => {
     beforeEach(() => {
         wrapper = shallowMount(Form, {
             propsData: {
-                source_form: {
+                form: {
                     form_errors: ['Test error 1', 'Test error 2'],
                     fields: [{
                         name: 'test_input',

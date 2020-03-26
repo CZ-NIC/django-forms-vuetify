@@ -24,14 +24,12 @@
                 v-bind="getCommonProperties()"
             />
             <div v-else>
-                Input item of {{ field.widget.type }} type is not supported yet.
-                {{ printError(field.widget) }}
+                {{ showError(field.widget) }}
             </div>
         </template>
 
         <div v-else>
-            Item with widget: {{ `name=${field.widget.name}, type=${field.widget.type}` }} is not supported yet.
-            {{ printError(field.widget) }}
+            {{ showError(field.widget) }}
         </div>
     </div>
 </template>
@@ -75,8 +73,10 @@ export default class FormItem extends Vue {
         }
     }
 
-    private printError(widget: WidgetInterface): void {
-        console.error(`Item with widget: { name=${widget.name}, type=${widget.type} } is not supported yet.`)
+    private showError(widget: WidgetInterface): string {
+        const error = `Item with widget: { name=${widget.name}, type=${widget.type} } is not supported yet.`
+        console.error(error)
+        return error
     }
 }
 </script>
