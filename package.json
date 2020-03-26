@@ -1,15 +1,30 @@
 {
-  "name": "django-forms-vuetify",
+  "name": "@cz-nic/django-forms-vuetify",
   "version": "0.0.1",
   "description": "Create Vuetify forms from encoded django forms in JSON",
   "author": "Karin Strouhalů <karin.strouhalu@nic.cz>",
   "license": "GPL-3.0",
   "main": "dist/django-forms-vuetify.common.js",
+  "homepage": "https://github.com/CZ-NIC/django-forms-vuetify",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/CZ-NIC/django-forms-vuetify"
+  },
+  "keywords": [
+    "django-forms",
+    "vuetify",
+    "dynamic form",
+    "dynamic vuetify form"
+  ],
+  "bugs": {
+    "url": "https://github.com/CZ-NIC/django-forms-vuetify/issues"
+  },
   "scripts": {
     "build": "vue-cli-service build --target lib --name 'django-forms-vuetify' src/main.ts",
     "check": "vue-cli-service lint --max-errors 0 --max-warnings 0 tests src",
     "test": "vue-cli-service test:unit",
-    "watch": "NODE_ENV=production vue-cli-service build --watch --mode development --target lib --name 'django-forms-vuetify' src/main.ts"
+    "watch": "vue-cli-service build --watch --mode development --target lib --name 'django-forms-vuetify' src/main.ts",
+    "prepublish": "npm run build"
   },
   "dependencies": {
     "core-js": "^3.6.4",
@@ -39,5 +54,12 @@
     "vue-property-decorator": "^8.4.0",
     "vue-template-compiler": "^2.6.11",
     "vuetify-loader": "^1.4.3"
-  }
+  },
+  "files": [
+    "dist",
+    "src",
+    "tests",
+    "*.js",
+    "*.json"
+  ]
 }
